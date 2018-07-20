@@ -4,6 +4,9 @@ Public Class Form1
     Dim lvl As Integer
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        currentexp = 0
+        exp = 0
+        lvl = 0
 
 
 
@@ -12,7 +15,7 @@ Public Class Form1
     End Sub
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
-        Str()
+        TextBox1.Text = currentexp
     End Sub
 
     Private Sub btnHomework_Click(sender As Object, e As EventArgs) Handles btnHomework.Click
