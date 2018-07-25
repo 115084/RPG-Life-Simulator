@@ -26,21 +26,19 @@ Partial Class Form1
         Me.btnHomework = New System.Windows.Forms.Button()
         Me.btnStudy = New System.Windows.Forms.Button()
         Me.btnExercise = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.lblExpStart = New System.Windows.Forms.Label()
-        Me.lblExpEnd = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(29, 120)
+        Me.TextBox1.Location = New System.Drawing.Point(54, 114)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(100, 20)
         Me.TextBox1.TabIndex = 0
         '
         'btnHomework
         '
-        Me.btnHomework.Location = New System.Drawing.Point(157, 26)
+        Me.btnHomework.Location = New System.Drawing.Point(319, 112)
         Me.btnHomework.Name = "btnHomework"
         Me.btnHomework.Size = New System.Drawing.Size(75, 23)
         Me.btnHomework.TabIndex = 1
@@ -49,7 +47,7 @@ Partial Class Form1
         '
         'btnStudy
         '
-        Me.btnStudy.Location = New System.Drawing.Point(157, 55)
+        Me.btnStudy.Location = New System.Drawing.Point(319, 156)
         Me.btnStudy.Name = "btnStudy"
         Me.btnStudy.Size = New System.Drawing.Size(75, 23)
         Me.btnStudy.TabIndex = 2
@@ -58,48 +56,26 @@ Partial Class Form1
         '
         'btnExercise
         '
-        Me.btnExercise.Location = New System.Drawing.Point(157, 91)
+        Me.btnExercise.Location = New System.Drawing.Point(319, 200)
         Me.btnExercise.Name = "btnExercise"
         Me.btnExercise.Size = New System.Drawing.Size(75, 23)
         Me.btnExercise.TabIndex = 3
         Me.btnExercise.Text = "Exercise"
         Me.btnExercise.UseVisualStyleBackColor = True
         '
-        'Button1
+        'TextBox2
         '
-        Me.Button1.Location = New System.Drawing.Point(52, 91)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(26, 23)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Homework"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'lblExpStart
-        '
-        Me.lblExpStart.AutoSize = True
-        Me.lblExpStart.Location = New System.Drawing.Point(12, 123)
-        Me.lblExpStart.Name = "lblExpStart"
-        Me.lblExpStart.Size = New System.Drawing.Size(13, 13)
-        Me.lblExpStart.TabIndex = 5
-        Me.lblExpStart.Text = "0"
-        '
-        'lblExpEnd
-        '
-        Me.lblExpEnd.AutoSize = True
-        Me.lblExpEnd.Location = New System.Drawing.Point(135, 123)
-        Me.lblExpEnd.Name = "lblExpEnd"
-        Me.lblExpEnd.Size = New System.Drawing.Size(13, 13)
-        Me.lblExpEnd.TabIndex = 6
-        Me.lblExpEnd.Text = "0"
+        Me.TextBox2.Location = New System.Drawing.Point(54, 200)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox2.TabIndex = 4
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(311, 152)
-        Me.Controls.Add(Me.lblExpEnd)
-        Me.Controls.Add(Me.lblExpStart)
-        Me.Controls.Add(Me.Button1)
+        Me.ClientSize = New System.Drawing.Size(508, 406)
+        Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.btnExercise)
         Me.Controls.Add(Me.btnStudy)
         Me.Controls.Add(Me.btnHomework)
@@ -115,7 +91,5 @@ Partial Class Form1
     Friend WithEvents btnHomework As Button
     Friend WithEvents btnStudy As Button
     Friend WithEvents btnExercise As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents lblExpStart As Label
-    Friend WithEvents lblExpEnd As Label
+    Friend WithEvents TextBox2 As TextBox
 End Class
