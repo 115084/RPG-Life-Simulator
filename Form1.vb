@@ -15,7 +15,7 @@ Public Class Form1
     Private Sub btnHomework_Click(sender As Object, e As EventArgs) Handles btnHomework.Click
         currentexp = currentexp + 1
         TextBox1.Text = currentexp
-        lvl = 10 * Math.Sqrt(currentexp)
+        lvl = Math.Sqrt(currentexp)
         TextBox2.Text = lvl
     End Sub
 
@@ -29,7 +29,7 @@ Public Class Form1
     Private Sub btnExercise_Click(sender As Object, e As EventArgs) Handles btnExercise.Click
         currentexp = currentexp + 1
         TextBox1.Text = currentexp
-        lvl = 10 * Math.Sqrt(currentexp)
+        lvl = Math.Sqrt(currentexp)
         TextBox2.Text = lvl
     End Sub
 
