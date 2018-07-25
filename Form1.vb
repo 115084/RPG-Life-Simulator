@@ -6,27 +6,31 @@ Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         currentexp = 0
         exp = 0
-        lvl = 0
 
 
 
 
 
     End Sub
-
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
-        TextBox1.Text = currentexp
-    End Sub
-
     Private Sub btnHomework_Click(sender As Object, e As EventArgs) Handles btnHomework.Click
-        currentExp = currentexp + 1
+        currentexp = currentexp + 1
+        TextBox1.Text = currentexp
+        lvl = 10 * Math.Sqrt(currentexp)
+        TextBox2.Text = lvl
     End Sub
 
     Private Sub btnStudy_Click(sender As Object, e As EventArgs) Handles btnStudy.Click
-        currentExp = currentexp + 1
+        currentexp = currentexp + 1
+        TextBox1.Text = currentexp
+        lvl = Math.Sqrt(currentexp)
+        TextBox2.Text = lvl
     End Sub
 
     Private Sub btnExercise_Click(sender As Object, e As EventArgs) Handles btnExercise.Click
         currentexp = currentexp + 1
+        TextBox1.Text = currentexp
+        lvl = 10 * Math.Sqrt(currentexp)
+        TextBox2.Text = lvl
     End Sub
+
 End Class
