@@ -22,23 +22,25 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtCurrentExp = New System.Windows.Forms.TextBox()
         Me.btnHomework = New System.Windows.Forms.Button()
         Me.btnStudy = New System.Windows.Forms.Button()
         Me.btnExercise = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtLevel = New System.Windows.Forms.TextBox()
+        Me.progressBar = New System.Windows.Forms.ProgressBar()
         Me.SuspendLayout()
         '
-        'TextBox1
+        'txtCurrentExp
         '
-        Me.TextBox1.Location = New System.Drawing.Point(54, 114)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 0
+        Me.txtCurrentExp.Location = New System.Drawing.Point(54, 114)
+        Me.txtCurrentExp.Name = "txtCurrentExp"
+        Me.txtCurrentExp.ReadOnly = True
+        Me.txtCurrentExp.Size = New System.Drawing.Size(100, 20)
+        Me.txtCurrentExp.TabIndex = 0
         '
         'btnHomework
         '
-        Me.btnHomework.Location = New System.Drawing.Point(319, 112)
+        Me.btnHomework.Location = New System.Drawing.Point(280, 111)
         Me.btnHomework.Name = "btnHomework"
         Me.btnHomework.Size = New System.Drawing.Size(75, 23)
         Me.btnHomework.TabIndex = 1
@@ -47,7 +49,7 @@ Partial Class Form1
         '
         'btnStudy
         '
-        Me.btnStudy.Location = New System.Drawing.Point(319, 156)
+        Me.btnStudy.Location = New System.Drawing.Point(280, 154)
         Me.btnStudy.Name = "btnStudy"
         Me.btnStudy.Size = New System.Drawing.Size(75, 23)
         Me.btnStudy.TabIndex = 2
@@ -56,30 +58,39 @@ Partial Class Form1
         '
         'btnExercise
         '
-        Me.btnExercise.Location = New System.Drawing.Point(319, 200)
+        Me.btnExercise.Location = New System.Drawing.Point(280, 200)
         Me.btnExercise.Name = "btnExercise"
         Me.btnExercise.Size = New System.Drawing.Size(75, 23)
         Me.btnExercise.TabIndex = 3
         Me.btnExercise.Text = "Exercise"
         Me.btnExercise.UseVisualStyleBackColor = True
         '
-        'TextBox2
+        'txtLevel
         '
-        Me.TextBox2.Location = New System.Drawing.Point(54, 200)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 4
+        Me.txtLevel.Location = New System.Drawing.Point(54, 190)
+        Me.txtLevel.Name = "txtLevel"
+        Me.txtLevel.ReadOnly = True
+        Me.txtLevel.Size = New System.Drawing.Size(100, 20)
+        Me.txtLevel.TabIndex = 4
+        '
+        'progressBar
+        '
+        Me.progressBar.Location = New System.Drawing.Point(54, 258)
+        Me.progressBar.Name = "progressBar"
+        Me.progressBar.Size = New System.Drawing.Size(100, 23)
+        Me.progressBar.TabIndex = 5
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(508, 406)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.progressBar)
+        Me.Controls.Add(Me.txtLevel)
         Me.Controls.Add(Me.btnExercise)
         Me.Controls.Add(Me.btnStudy)
         Me.Controls.Add(Me.btnHomework)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtCurrentExp)
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
@@ -87,9 +98,10 @@ Partial Class Form1
 
     End Sub
 
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtCurrentExp As TextBox
     Friend WithEvents btnHomework As Button
     Friend WithEvents btnStudy As Button
     Friend WithEvents btnExercise As Button
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtLevel As TextBox
+    Friend WithEvents progressBar As ProgressBar
 End Class
