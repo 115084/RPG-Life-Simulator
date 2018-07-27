@@ -28,6 +28,8 @@ Partial Class Form1
         Me.btnExercise = New System.Windows.Forms.Button()
         Me.txtLevel = New System.Windows.Forms.TextBox()
         Me.progressBar = New System.Windows.Forms.ProgressBar()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtCurrentExp
@@ -80,11 +82,21 @@ Partial Class Form1
         Me.progressBar.Size = New System.Drawing.Size(100, 23)
         Me.progressBar.TabIndex = 5
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.BnBProject2018.My.Resources.Resources.Unranked
+        Me.PictureBox1.Location = New System.Drawing.Point(54, 287)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(100, 100)
+        Me.PictureBox1.TabIndex = 6
+        Me.PictureBox1.TabStop = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(508, 406)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.progressBar)
         Me.Controls.Add(Me.txtLevel)
         Me.Controls.Add(Me.btnExercise)
@@ -93,6 +105,7 @@ Partial Class Form1
         Me.Controls.Add(Me.txtCurrentExp)
         Me.Name = "Form1"
         Me.Text = "Form1"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -104,4 +117,5 @@ Partial Class Form1
     Friend WithEvents btnExercise As Button
     Friend WithEvents txtLevel As TextBox
     Friend WithEvents progressBar As ProgressBar
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
