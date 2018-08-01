@@ -66,7 +66,15 @@ Partial Class Form1
         'btnExercise
         '
         Me.btnExercise.Location = New System.Drawing.Point(280, 200)
-        Me.btnExercise.Name = "btnExercise"
+        '
+        'clistTime
+        '
+        Me.clistTime.FormattingEnabled = True
+        Me.clistTime.Items.AddRange(New Object() {"15 minutes", "30 minutes", "60 minutes"})
+        Me.clistTime.Location = New System.Drawing.Point(376, 141)
+        Me.clistTime.Name = "clistTime"
+        Me.clistTime.Size = New System.Drawing.Size(120, 49)
+        Me.clistTime.TabIndex = 6Me.btnExercise.Name = "btnExercise"
         Me.btnExercise.Size = New System.Drawing.Size(75, 23)
         Me.btnExercise.TabIndex = 3
         Me.btnExercise.Text = "Exercise"
