@@ -22,7 +22,6 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.txtCurrentExp = New System.Windows.Forms.TextBox()
         Me.btnHomework = New System.Windows.Forms.Button()
         Me.btnStudy = New System.Windows.Forms.Button()
@@ -32,6 +31,7 @@ Partial Class Form1
         Me.ImgTro = New System.Windows.Forms.PictureBox()
         Me.imgExc = New System.Windows.Forms.PictureBox()
         Me.imgEye = New System.Windows.Forms.PictureBox()
+        Me.clistTime = New System.Windows.Forms.CheckedListBox()
         CType(Me.ImgTro, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.imgExc, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.imgEye, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -89,7 +89,6 @@ Partial Class Form1
         '
         'ImgTro
         '
-        Me.ImgTro.Image = CType(resources.GetObject("ImgTro.Image"), System.Drawing.Image)
         Me.ImgTro.Location = New System.Drawing.Point(54, 8)
         Me.ImgTro.Name = "ImgTro"
         Me.ImgTro.Size = New System.Drawing.Size(100, 100)
@@ -99,7 +98,6 @@ Partial Class Form1
         '
         'imgExc
         '
-        Me.imgExc.Image = CType(resources.GetObject("imgExc.Image"), System.Drawing.Image)
         Me.imgExc.Location = New System.Drawing.Point(54, 8)
         Me.imgExc.Name = "imgExc"
         Me.imgExc.Size = New System.Drawing.Size(100, 100)
@@ -109,7 +107,6 @@ Partial Class Form1
         '
         'imgEye
         '
-        Me.imgEye.Image = CType(resources.GetObject("imgEye.Image"), System.Drawing.Image)
         Me.imgEye.Location = New System.Drawing.Point(54, 8)
         Me.imgEye.Name = "imgEye"
         Me.imgEye.Size = New System.Drawing.Size(100, 100)
@@ -117,11 +114,21 @@ Partial Class Form1
         Me.imgEye.TabStop = False
         Me.imgEye.Visible = False
         '
+        'clistTime
+        '
+        Me.clistTime.FormattingEnabled = True
+        Me.clistTime.Items.AddRange(New Object() {"15 minutes", "30 minutes", "60 minutes"})
+        Me.clistTime.Location = New System.Drawing.Point(361, 140)
+        Me.clistTime.Name = "clistTime"
+        Me.clistTime.Size = New System.Drawing.Size(119, 49)
+        Me.clistTime.TabIndex = 9
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(508, 406)
+        Me.Controls.Add(Me.clistTime)
         Me.Controls.Add(Me.imgEye)
         Me.Controls.Add(Me.imgExc)
         Me.Controls.Add(Me.ImgTro)
@@ -150,4 +157,5 @@ Partial Class Form1
     Friend WithEvents ImgTro As PictureBox
     Friend WithEvents imgExc As PictureBox
     Friend WithEvents imgEye As PictureBox
+    Friend WithEvents clistTime As CheckedListBox
 End Class
