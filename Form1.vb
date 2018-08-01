@@ -4,7 +4,7 @@ Public Class Form1
     Dim lvl As Single
     Dim displayLvl As Integer
     Dim levelingSystem As String
-    Dim calculator As Calculations = New Calculations()
+    Dim calculator As Calculations
     Dim sb As String
 
 
@@ -12,6 +12,7 @@ Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs)
         currentexp = 0
         exp = 0
+        calculator = New Calculations()
 
     End Sub
     Private Sub btnHomework_Click_1(sender As Object, e As EventArgs) Handles btnHomework.Click
