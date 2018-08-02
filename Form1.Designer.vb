@@ -31,7 +31,6 @@ Partial Class Form1
         Me.ImgTro = New System.Windows.Forms.PictureBox()
         Me.imgExc = New System.Windows.Forms.PictureBox()
         Me.imgEye = New System.Windows.Forms.PictureBox()
-        Me.clistTime = New System.Windows.Forms.CheckedListBox()
         CType(Me.ImgTro, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.imgExc, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.imgEye, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -39,7 +38,7 @@ Partial Class Form1
         '
         'txtCurrentExp
         '
-        Me.txtCurrentExp.Location = New System.Drawing.Point(54, 114)
+        Me.txtCurrentExp.Location = New System.Drawing.Point(12, 131)
         Me.txtCurrentExp.Name = "txtCurrentExp"
         Me.txtCurrentExp.ReadOnly = True
         Me.txtCurrentExp.Size = New System.Drawing.Size(100, 20)
@@ -47,7 +46,7 @@ Partial Class Form1
         '
         'btnHomework
         '
-        Me.btnHomework.Location = New System.Drawing.Point(280, 111)
+        Me.btnHomework.Location = New System.Drawing.Point(146, 129)
         Me.btnHomework.Name = "btnHomework"
         Me.btnHomework.Size = New System.Drawing.Size(75, 23)
         Me.btnHomework.TabIndex = 1
@@ -56,7 +55,7 @@ Partial Class Form1
         '
         'btnStudy
         '
-        Me.btnStudy.Location = New System.Drawing.Point(280, 154)
+        Me.btnStudy.Location = New System.Drawing.Point(146, 167)
         Me.btnStudy.Name = "btnStudy"
         Me.btnStudy.Size = New System.Drawing.Size(75, 23)
         Me.btnStudy.TabIndex = 2
@@ -65,7 +64,7 @@ Partial Class Form1
         '
         'btnExercise
         '
-        Me.btnExercise.Location = New System.Drawing.Point(280, 200)
+        Me.btnExercise.Location = New System.Drawing.Point(146, 200)
         Me.btnExercise.Name = "btnExercise"
         Me.btnExercise.Size = New System.Drawing.Size(75, 23)
         Me.btnExercise.TabIndex = 3
@@ -74,7 +73,7 @@ Partial Class Form1
         '
         'txtLevel
         '
-        Me.txtLevel.Location = New System.Drawing.Point(54, 190)
+        Me.txtLevel.Location = New System.Drawing.Point(12, 167)
         Me.txtLevel.Name = "txtLevel"
         Me.txtLevel.ReadOnly = True
         Me.txtLevel.Size = New System.Drawing.Size(100, 20)
@@ -82,14 +81,14 @@ Partial Class Form1
         '
         'progressBar
         '
-        Me.progressBar.Location = New System.Drawing.Point(54, 258)
+        Me.progressBar.Location = New System.Drawing.Point(12, 200)
         Me.progressBar.Name = "progressBar"
         Me.progressBar.Size = New System.Drawing.Size(100, 23)
         Me.progressBar.TabIndex = 5
         '
         'ImgTro
         '
-        Me.ImgTro.Location = New System.Drawing.Point(54, 8)
+        Me.ImgTro.Location = New System.Drawing.Point(66, 8)
         Me.ImgTro.Name = "ImgTro"
         Me.ImgTro.Size = New System.Drawing.Size(100, 100)
         Me.ImgTro.TabIndex = 6
@@ -98,7 +97,7 @@ Partial Class Form1
         '
         'imgExc
         '
-        Me.imgExc.Location = New System.Drawing.Point(54, 8)
+        Me.imgExc.Location = New System.Drawing.Point(66, 8)
         Me.imgExc.Name = "imgExc"
         Me.imgExc.Size = New System.Drawing.Size(100, 100)
         Me.imgExc.TabIndex = 7
@@ -107,28 +106,18 @@ Partial Class Form1
         '
         'imgEye
         '
-        Me.imgEye.Location = New System.Drawing.Point(54, 8)
+        Me.imgEye.Location = New System.Drawing.Point(66, 8)
         Me.imgEye.Name = "imgEye"
         Me.imgEye.Size = New System.Drawing.Size(100, 100)
         Me.imgEye.TabIndex = 8
         Me.imgEye.TabStop = False
         Me.imgEye.Visible = False
         '
-        'clistTime
-        '
-        Me.clistTime.FormattingEnabled = True
-        Me.clistTime.Items.AddRange(New Object() {"15 minutes", "30 minutes", "60 minutes"})
-        Me.clistTime.Location = New System.Drawing.Point(361, 140)
-        Me.clistTime.Name = "clistTime"
-        Me.clistTime.Size = New System.Drawing.Size(119, 49)
-        Me.clistTime.TabIndex = 9
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(508, 406)
-        Me.Controls.Add(Me.clistTime)
+        Me.ClientSize = New System.Drawing.Size(242, 257)
         Me.Controls.Add(Me.imgEye)
         Me.Controls.Add(Me.imgExc)
         Me.Controls.Add(Me.ImgTro)
@@ -157,5 +146,4 @@ Partial Class Form1
     Friend WithEvents ImgTro As PictureBox
     Friend WithEvents imgExc As PictureBox
     Friend WithEvents imgEye As PictureBox
-    Friend WithEvents clistTime As CheckedListBox
 End Class
