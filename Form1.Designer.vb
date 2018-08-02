@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.txtCurrentExp = New System.Windows.Forms.TextBox()
         Me.btnHomework = New System.Windows.Forms.Button()
         Me.btnStudy = New System.Windows.Forms.Button()
@@ -31,14 +32,24 @@ Partial Class Form1
         Me.ImgTro = New System.Windows.Forms.PictureBox()
         Me.imgExc = New System.Windows.Forms.PictureBox()
         Me.imgEye = New System.Windows.Forms.PictureBox()
+        Me.imgUnr = New System.Windows.Forms.PictureBox()
+        Me.imgBro = New System.Windows.Forms.PictureBox()
+        Me.imgSil = New System.Windows.Forms.PictureBox()
+        Me.imgGol = New System.Windows.Forms.PictureBox()
+        Me.imgPla = New System.Windows.Forms.PictureBox()
         CType(Me.ImgTro, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.imgExc, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.imgEye, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.imgUnr, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.imgBro, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.imgSil, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.imgGol, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.imgPla, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtCurrentExp
         '
-        Me.txtCurrentExp.Location = New System.Drawing.Point(12, 131)
+        Me.txtCurrentExp.Location = New System.Drawing.Point(12, 114)
         Me.txtCurrentExp.Name = "txtCurrentExp"
         Me.txtCurrentExp.ReadOnly = True
         Me.txtCurrentExp.Size = New System.Drawing.Size(100, 20)
@@ -46,7 +57,7 @@ Partial Class Form1
         '
         'btnHomework
         '
-        Me.btnHomework.Location = New System.Drawing.Point(146, 129)
+        Me.btnHomework.Location = New System.Drawing.Point(175, 114)
         Me.btnHomework.Name = "btnHomework"
         Me.btnHomework.Size = New System.Drawing.Size(75, 23)
         Me.btnHomework.TabIndex = 1
@@ -55,7 +66,7 @@ Partial Class Form1
         '
         'btnStudy
         '
-        Me.btnStudy.Location = New System.Drawing.Point(146, 167)
+        Me.btnStudy.Location = New System.Drawing.Point(175, 148)
         Me.btnStudy.Name = "btnStudy"
         Me.btnStudy.Size = New System.Drawing.Size(75, 23)
         Me.btnStudy.TabIndex = 2
@@ -64,7 +75,7 @@ Partial Class Form1
         '
         'btnExercise
         '
-        Me.btnExercise.Location = New System.Drawing.Point(146, 200)
+        Me.btnExercise.Location = New System.Drawing.Point(175, 187)
         Me.btnExercise.Name = "btnExercise"
         Me.btnExercise.Size = New System.Drawing.Size(75, 23)
         Me.btnExercise.TabIndex = 3
@@ -73,7 +84,7 @@ Partial Class Form1
         '
         'txtLevel
         '
-        Me.txtLevel.Location = New System.Drawing.Point(12, 167)
+        Me.txtLevel.Location = New System.Drawing.Point(12, 151)
         Me.txtLevel.Name = "txtLevel"
         Me.txtLevel.ReadOnly = True
         Me.txtLevel.Size = New System.Drawing.Size(100, 20)
@@ -81,14 +92,15 @@ Partial Class Form1
         '
         'progressBar
         '
-        Me.progressBar.Location = New System.Drawing.Point(12, 200)
+        Me.progressBar.Location = New System.Drawing.Point(12, 187)
         Me.progressBar.Name = "progressBar"
         Me.progressBar.Size = New System.Drawing.Size(100, 23)
         Me.progressBar.TabIndex = 5
         '
         'ImgTro
         '
-        Me.ImgTro.Location = New System.Drawing.Point(66, 8)
+        Me.ImgTro.Image = CType(resources.GetObject("ImgTro.Image"), System.Drawing.Image)
+        Me.ImgTro.Location = New System.Drawing.Point(150, 8)
         Me.ImgTro.Name = "ImgTro"
         Me.ImgTro.Size = New System.Drawing.Size(100, 100)
         Me.ImgTro.TabIndex = 6
@@ -97,7 +109,8 @@ Partial Class Form1
         '
         'imgExc
         '
-        Me.imgExc.Location = New System.Drawing.Point(66, 8)
+        Me.imgExc.Image = CType(resources.GetObject("imgExc.Image"), System.Drawing.Image)
+        Me.imgExc.Location = New System.Drawing.Point(150, 8)
         Me.imgExc.Name = "imgExc"
         Me.imgExc.Size = New System.Drawing.Size(100, 100)
         Me.imgExc.TabIndex = 7
@@ -106,18 +119,74 @@ Partial Class Form1
         '
         'imgEye
         '
-        Me.imgEye.Location = New System.Drawing.Point(66, 8)
+        Me.imgEye.Image = CType(resources.GetObject("imgEye.Image"), System.Drawing.Image)
+        Me.imgEye.Location = New System.Drawing.Point(150, 8)
         Me.imgEye.Name = "imgEye"
         Me.imgEye.Size = New System.Drawing.Size(100, 100)
         Me.imgEye.TabIndex = 8
         Me.imgEye.TabStop = False
         Me.imgEye.Visible = False
         '
+        'imgUnr
+        '
+        Me.imgUnr.Image = CType(resources.GetObject("imgUnr.Image"), System.Drawing.Image)
+        Me.imgUnr.Location = New System.Drawing.Point(12, 8)
+        Me.imgUnr.Name = "imgUnr"
+        Me.imgUnr.Size = New System.Drawing.Size(100, 100)
+        Me.imgUnr.TabIndex = 9
+        Me.imgUnr.TabStop = False
+        Me.imgUnr.Visible = False
+        '
+        'imgBro
+        '
+        Me.imgBro.Image = CType(resources.GetObject("imgBro.Image"), System.Drawing.Image)
+        Me.imgBro.Location = New System.Drawing.Point(12, 8)
+        Me.imgBro.Name = "imgBro"
+        Me.imgBro.Size = New System.Drawing.Size(100, 100)
+        Me.imgBro.TabIndex = 10
+        Me.imgBro.TabStop = False
+        Me.imgBro.Visible = False
+        '
+        'imgSil
+        '
+        Me.imgSil.Image = CType(resources.GetObject("imgSil.Image"), System.Drawing.Image)
+        Me.imgSil.Location = New System.Drawing.Point(12, 8)
+        Me.imgSil.Name = "imgSil"
+        Me.imgSil.Size = New System.Drawing.Size(100, 100)
+        Me.imgSil.TabIndex = 11
+        Me.imgSil.TabStop = False
+        Me.imgSil.Visible = False
+        '
+        'imgGol
+        '
+        Me.imgGol.Image = CType(resources.GetObject("imgGol.Image"), System.Drawing.Image)
+        Me.imgGol.Location = New System.Drawing.Point(12, 8)
+        Me.imgGol.Name = "imgGol"
+        Me.imgGol.Size = New System.Drawing.Size(100, 100)
+        Me.imgGol.TabIndex = 12
+        Me.imgGol.TabStop = False
+        Me.imgGol.Visible = False
+        '
+        'imgPla
+        '
+        Me.imgPla.Image = CType(resources.GetObject("imgPla.Image"), System.Drawing.Image)
+        Me.imgPla.Location = New System.Drawing.Point(12, 8)
+        Me.imgPla.Name = "imgPla"
+        Me.imgPla.Size = New System.Drawing.Size(100, 100)
+        Me.imgPla.TabIndex = 13
+        Me.imgPla.TabStop = False
+        Me.imgPla.Visible = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(242, 257)
+        Me.ClientSize = New System.Drawing.Size(279, 227)
+        Me.Controls.Add(Me.imgPla)
+        Me.Controls.Add(Me.imgGol)
+        Me.Controls.Add(Me.imgSil)
+        Me.Controls.Add(Me.imgBro)
+        Me.Controls.Add(Me.imgUnr)
         Me.Controls.Add(Me.imgEye)
         Me.Controls.Add(Me.imgExc)
         Me.Controls.Add(Me.ImgTro)
@@ -132,6 +201,11 @@ Partial Class Form1
         CType(Me.ImgTro, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.imgExc, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.imgEye, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.imgUnr, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.imgBro, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.imgSil, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.imgGol, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.imgPla, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -146,4 +220,9 @@ Partial Class Form1
     Friend WithEvents ImgTro As PictureBox
     Friend WithEvents imgExc As PictureBox
     Friend WithEvents imgEye As PictureBox
+    Friend WithEvents imgUnr As PictureBox
+    Friend WithEvents imgBro As PictureBox
+    Friend WithEvents imgSil As PictureBox
+    Friend WithEvents imgGol As PictureBox
+    Friend WithEvents imgPla As PictureBox
 End Class
