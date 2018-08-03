@@ -39,8 +39,8 @@ Partial Class Form1
         Me.imgPla = New System.Windows.Forms.PictureBox()
         Me.btnReset = New System.Windows.Forms.Button()
         Me.lblExp = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lblLvl = New System.Windows.Forms.Label()
+        Me.lblPro = New System.Windows.Forms.Label()
         CType(Me.ImgTro, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.imgExc, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.imgEye, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -200,25 +200,25 @@ Partial Class Form1
         Me.lblExp.TabIndex = 15
         Me.lblExp.Text = "Exp:"
         '
-        'Label1
+        'lblLvl
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(1, 154)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(36, 13)
-        Me.Label1.TabIndex = 16
-        Me.Label1.Text = "Level:"
+        Me.lblLvl.AutoSize = True
+        Me.lblLvl.ForeColor = System.Drawing.Color.White
+        Me.lblLvl.Location = New System.Drawing.Point(1, 154)
+        Me.lblLvl.Name = "lblLvl"
+        Me.lblLvl.Size = New System.Drawing.Size(36, 13)
+        Me.lblLvl.TabIndex = 16
+        Me.lblLvl.Text = "Level:"
         '
-        'Label2
+        'lblPro
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(64, 174)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(48, 13)
-        Me.Label2.TabIndex = 17
-        Me.Label2.Text = "Progress"
+        Me.lblPro.AutoSize = True
+        Me.lblPro.ForeColor = System.Drawing.Color.White
+        Me.lblPro.Location = New System.Drawing.Point(64, 174)
+        Me.lblPro.Name = "lblPro"
+        Me.lblPro.Size = New System.Drawing.Size(48, 13)
+        Me.lblPro.TabIndex = 17
+        Me.lblPro.Text = "Progress"
         '
         'Form1
         '
@@ -226,8 +226,8 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Navy
         Me.ClientSize = New System.Drawing.Size(279, 260)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lblPro)
+        Me.Controls.Add(Me.lblLvl)
         Me.Controls.Add(Me.lblExp)
         Me.Controls.Add(Me.btnReset)
         Me.Controls.Add(Me.imgPla)
@@ -275,6 +275,6 @@ Partial Class Form1
     Friend WithEvents imgPla As PictureBox
     Friend WithEvents btnReset As Button
     Friend WithEvents lblExp As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
+    Friend WithEvents lblLvl As Label
+    Friend WithEvents lblPro As Label
 End Class
