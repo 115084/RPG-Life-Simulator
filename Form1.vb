@@ -10,24 +10,26 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If System.IO.File.Exists(FILE_NAME) = True Then
-            'this code will 
+            'this code will read the database file
             Dim fileReader As System.IO.StreamReader
             fileReader = My.Computer.FileSystem.OpenTextFileReader(FILE_NAME)
             Dim stringReader As String
-            stringReader = fileReader.ReadLine(1)
+            stringReader = fileReader.ReadLine()
             currentexp = stringReader
+            txtCurrentExp.Text = stringReader
             fileReader.Close()
         Else
             'incase the user does not have the file, this will force them to create the file
             MessageBox.Show("Exp file does not exist, please create db.txt in bin")
 
         End If
+        imgUnr.Visible = True
     End Sub
 
     Private Sub btnHomework_Click_1(sender As Object, e As EventArgs) Handles btnHomework.Click
         currentexp = currentexp + 1 'each time this button is pressed add 1exp
         txtCurrentExp.Text = currentexp 'displaying the exp on the form
-        lvl = Math.Floor((Math.Sqrt(currentexp) / 2)) 'the level will equal 0.75 and will round up due to using integer, so i used some round down code
+        lvl = Math.Floor((Math.Sqrt(currentexp) / 2)) 'the level will equal 0.75 and will round up due to using integer, so round down code is used 
         progressBar.Value = currentexp 'setting the progress bar to the current value of exp
         calculator.updateProgressBar(lvl) 'sends the lvl to the calculations class, then it will work out how much is need
         txtLevel.Text = lvl 'display lvl on form
@@ -108,7 +110,7 @@ Public Class Form1
         If System.IO.File.Exists(FILE_NAME) = True Then
 
             Dim objWriter As New System.IO.StreamWriter(FILE_NAME)
-
+            'This code will reset the exp and close the program
             objWriter.Write("0")
             objWriter.Close()
             Me.Close()
