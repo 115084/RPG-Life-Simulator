@@ -11,18 +11,18 @@ Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If System.IO.File.Exists(FILE_NAME) = True Then
             Dim fileReader As System.IO.StreamReader
-            fileReader = My.Computer.FileSystem.OpenTextFileReader("\db.txt")
+            fileReader = My.Computer.FileSystem.OpenTextFileReader(FILE_NAME)
             Dim stringReader As String
             stringReader = fileReader.ReadLine()
             currentexp = stringReader
+            fileReader.Close()
         Else
 
             MessageBox.Show("Exp file does not exist, please download db.txt")
 
         End If
 
-        imgUnr.Visiblity = True
-
+        'imgUnr.Visible = True
     End Sub
 
     Private Sub btnHomework_Click_1(sender As Object, e As EventArgs) Handles btnHomework.Click
@@ -43,7 +43,6 @@ Public Class Form1
 
             objWriter.Write(txtCurrentExp.Text)
             objWriter.Close()
-            MessageBox.Show("Text written to file")
 
         Else
 
@@ -71,7 +70,6 @@ Public Class Form1
 
             objWriter.Write(txtCurrentExp.Text)
             objWriter.Close()
-            MessageBox.Show("Text written to file")
 
         Else
 
@@ -99,7 +97,6 @@ Public Class Form1
 
             objWriter.Write(txtCurrentExp.Text)
             objWriter.Close()
-            MessageBox.Show("Text written to file")
 
         Else
 
@@ -108,5 +105,19 @@ Public Class Form1
         End If
     End Sub
 
+    Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
+        If System.IO.File.Exists(FILE_NAME) = True Then
+
+            Dim objWriter As New System.IO.StreamWriter(FILE_NAME)
+
+            objWriter.Write("0")
+            objWriter.Close()
+
+        Else
+
+            MessageBox.Show("File Does Not Exist")
+
+        End If
+    End Sub
 
 End Class
