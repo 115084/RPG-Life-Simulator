@@ -17,12 +17,11 @@ Public Class Form1
             currentexp = stringReader
             fileReader.Close()
         Else
-
-            MessageBox.Show("Exp file does not exist, please download db.txt")
+            'incase the user does not have the file, this will force them to create the file
+            MessageBox.Show("Exp file does not exist, please create db.txt in bin")
 
         End If
-
-        'imgUnr.Visible = True
+        calculator.updateProgressBar(lvl)
     End Sub
 
     Private Sub btnHomework_Click_1(sender As Object, e As EventArgs) Handles btnHomework.Click
@@ -38,7 +37,7 @@ Public Class Form1
         imgEye.Visible = False
 
         If System.IO.File.Exists(FILE_NAME) = True Then
-
+            'this code will write to the db.txt file
             Dim objWriter As New System.IO.StreamWriter(FILE_NAME)
 
             objWriter.Write(txtCurrentExp.Text)
@@ -65,7 +64,7 @@ Public Class Form1
         imgEye.Visible = False
 
         If System.IO.File.Exists(FILE_NAME) = True Then
-
+            'this code will write to the db.txt file
             Dim objWriter As New System.IO.StreamWriter(FILE_NAME)
 
             objWriter.Write(txtCurrentExp.Text)
@@ -92,14 +91,14 @@ Public Class Form1
         imgEye.Visible = True 'this is showing the img for when you press this button
 
         If System.IO.File.Exists(FILE_NAME) = True Then
-
+            'this code will write to the db.txt file
             Dim objWriter As New System.IO.StreamWriter(FILE_NAME)
 
             objWriter.Write(txtCurrentExp.Text)
             objWriter.Close()
 
         Else
-
+            'in case the user does not have db.txt, this is a second counter measure, making the program very hard to use without it
             MessageBox.Show("File Does Not Exist")
 
         End If
@@ -112,7 +111,7 @@ Public Class Form1
 
             objWriter.Write("0")
             objWriter.Close()
-
+            Me.Close()
         Else
 
             MessageBox.Show("File Does Not Exist")
