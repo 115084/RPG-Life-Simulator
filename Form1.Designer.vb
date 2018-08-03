@@ -37,6 +37,10 @@ Partial Class Form1
         Me.imgSil = New System.Windows.Forms.PictureBox()
         Me.imgGol = New System.Windows.Forms.PictureBox()
         Me.imgPla = New System.Windows.Forms.PictureBox()
+        Me.btnReset = New System.Windows.Forms.Button()
+        Me.lblExp = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.ImgTro, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.imgExc, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.imgEye, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -49,7 +53,7 @@ Partial Class Form1
         '
         'txtCurrentExp
         '
-        Me.txtCurrentExp.Location = New System.Drawing.Point(12, 114)
+        Me.txtCurrentExp.Location = New System.Drawing.Point(44, 114)
         Me.txtCurrentExp.Name = "txtCurrentExp"
         Me.txtCurrentExp.ReadOnly = True
         Me.txtCurrentExp.Size = New System.Drawing.Size(100, 20)
@@ -75,7 +79,7 @@ Partial Class Form1
         '
         'btnExercise
         '
-        Me.btnExercise.Location = New System.Drawing.Point(175, 187)
+        Me.btnExercise.Location = New System.Drawing.Point(175, 180)
         Me.btnExercise.Name = "btnExercise"
         Me.btnExercise.Size = New System.Drawing.Size(75, 23)
         Me.btnExercise.TabIndex = 3
@@ -84,7 +88,7 @@ Partial Class Form1
         '
         'txtLevel
         '
-        Me.txtLevel.Location = New System.Drawing.Point(12, 151)
+        Me.txtLevel.Location = New System.Drawing.Point(44, 151)
         Me.txtLevel.Name = "txtLevel"
         Me.txtLevel.ReadOnly = True
         Me.txtLevel.Size = New System.Drawing.Size(100, 20)
@@ -92,7 +96,7 @@ Partial Class Form1
         '
         'progressBar
         '
-        Me.progressBar.Location = New System.Drawing.Point(12, 187)
+        Me.progressBar.Location = New System.Drawing.Point(44, 190)
         Me.progressBar.Name = "progressBar"
         Me.progressBar.Size = New System.Drawing.Size(100, 23)
         Me.progressBar.TabIndex = 5
@@ -100,7 +104,7 @@ Partial Class Form1
         'ImgTro
         '
         Me.ImgTro.Image = CType(resources.GetObject("ImgTro.Image"), System.Drawing.Image)
-        Me.ImgTro.Location = New System.Drawing.Point(150, 8)
+        Me.ImgTro.Location = New System.Drawing.Point(167, 8)
         Me.ImgTro.Name = "ImgTro"
         Me.ImgTro.Size = New System.Drawing.Size(100, 100)
         Me.ImgTro.TabIndex = 6
@@ -110,7 +114,7 @@ Partial Class Form1
         'imgExc
         '
         Me.imgExc.Image = CType(resources.GetObject("imgExc.Image"), System.Drawing.Image)
-        Me.imgExc.Location = New System.Drawing.Point(150, 8)
+        Me.imgExc.Location = New System.Drawing.Point(167, 8)
         Me.imgExc.Name = "imgExc"
         Me.imgExc.Size = New System.Drawing.Size(100, 100)
         Me.imgExc.TabIndex = 7
@@ -120,7 +124,7 @@ Partial Class Form1
         'imgEye
         '
         Me.imgEye.Image = CType(resources.GetObject("imgEye.Image"), System.Drawing.Image)
-        Me.imgEye.Location = New System.Drawing.Point(150, 8)
+        Me.imgEye.Location = New System.Drawing.Point(167, 8)
         Me.imgEye.Name = "imgEye"
         Me.imgEye.Size = New System.Drawing.Size(100, 100)
         Me.imgEye.TabIndex = 8
@@ -177,11 +181,55 @@ Partial Class Form1
         Me.imgPla.TabStop = False
         Me.imgPla.Visible = False
         '
+        'btnReset
+        '
+        Me.btnReset.Location = New System.Drawing.Point(106, 225)
+        Me.btnReset.Name = "btnReset"
+        Me.btnReset.Size = New System.Drawing.Size(75, 23)
+        Me.btnReset.TabIndex = 14
+        Me.btnReset.Text = "Reset"
+        Me.btnReset.UseVisualStyleBackColor = True
+        '
+        'lblExp
+        '
+        Me.lblExp.AutoSize = True
+        Me.lblExp.ForeColor = System.Drawing.Color.White
+        Me.lblExp.Location = New System.Drawing.Point(9, 117)
+        Me.lblExp.Name = "lblExp"
+        Me.lblExp.Size = New System.Drawing.Size(28, 13)
+        Me.lblExp.TabIndex = 15
+        Me.lblExp.Text = "Exp:"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(1, 154)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(36, 13)
+        Me.Label1.TabIndex = 16
+        Me.Label1.Text = "Level:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(64, 174)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(48, 13)
+        Me.Label2.TabIndex = 17
+        Me.Label2.Text = "Progress"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(279, 227)
+        Me.BackColor = System.Drawing.Color.Navy
+        Me.ClientSize = New System.Drawing.Size(279, 260)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lblExp)
+        Me.Controls.Add(Me.btnReset)
         Me.Controls.Add(Me.imgPla)
         Me.Controls.Add(Me.imgGol)
         Me.Controls.Add(Me.imgSil)
@@ -225,4 +273,8 @@ Partial Class Form1
     Friend WithEvents imgSil As PictureBox
     Friend WithEvents imgGol As PictureBox
     Friend WithEvents imgPla As PictureBox
+    Friend WithEvents btnReset As Button
+    Friend WithEvents lblExp As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
 End Class
