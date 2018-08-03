@@ -22,19 +22,6 @@ Public Class Form1
             MessageBox.Show("Exp file does not exist, please create db.txt in bin")
 
         End If
-        If System.IO.File.Exists(FILE_NAME) = True Then
-            'this code will 
-            Dim fileReader As System.IO.StreamReader
-            fileReader = My.Computer.FileSystem.OpenTextFileReader(FILE_NAME)
-            Dim lvlReader As String
-            lvlReader = fileReader.ReadLine(2)
-            lvl = lvlReader
-            fileReader.Close()
-        Else
-            'incase the user does not have the file, this will force them to create the file
-            MessageBox.Show("Exp file does not exist, please create db.txt in bin")
-
-        End If
     End Sub
 
     Private Sub btnHomework_Click_1(sender As Object, e As EventArgs) Handles btnHomework.Click
@@ -54,7 +41,6 @@ Public Class Form1
             Dim objWriter As New System.IO.StreamWriter(FILE_NAME)
 
             objWriter.Write(currentexp)
-            objWriter.Write(lvl)
             objWriter.Close()
 
         Else
